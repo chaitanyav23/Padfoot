@@ -1,0 +1,166 @@
+/* zoom.css */
+.zoom-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #660000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.2s;
+}
+
+.zoom-controls button:hover {
+    background-color: #990000;
+}
+
+
+/* for theme */
+:root {
+    --bg-color: #fff9e6;
+    --text-color: #000000;
+    --heading-color: #660000;
+    --link-color: #000000;
+    --link-hover-color: #660000;
+}
+
+/* Theme 1: Default */
+body.theme-default {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+body.theme-default h1,
+body.theme-default h2,
+body.theme-default h3,
+body.theme-default h4,
+body.theme-default h5,
+body.theme-default h6 {
+    color: var(--heading-color);
+}
+body.theme-default a {
+    color: var(--link-color);
+}
+body.theme-default a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Theme 2: Dark */
+body.theme-dark {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;      /* Make all normal text white */
+    --heading-color: #ff5555;   /* Optional: headings in red */
+    --link-color: #ffffff;      /* Links white */
+    --link-hover-color: #ff5555; /* Links hover red */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Apply to headings */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+    color: var(--heading-color);
+}
+
+/* Apply to links */
+body.theme-dark a {
+    color: var(--link-color);
+}
+body.theme-dark a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Tables, captions, code blocks, etc. */
+body.theme-dark table,
+body.theme-dark td,
+body.theme-dark caption,
+body.theme-dark pre,
+body.theme-dark code {
+    color: var(--text-color);
+}
+
+
+/* Theme 3: Blue */
+body.theme-blue {
+    --bg-color: #e6f0ff;
+    --text-color: #003366;
+    --heading-color: #001f4d;
+    --link-color: #003366;
+    --link-hover-color: #001f4d;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#theme-selector {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    z-index: 9999;
+}
+
+
+#theme-selector button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+#theme-selector button:hover {
+    background-color: #ddd;
+}
+
+#theme-selector {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    z-index: 9999;
+}
+
+.swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.swatch:hover {
+    transform: scale(1.2);
+    border-color: #666;
+}
+

@@ -1,0 +1,31 @@
+.venv
+original_legacy
+__pycache__
+.app.py.un~
+.README.md.un~
+app.py~
+doc.tar.gz
+wsl_venv
+chroma_db
+*.swp
+
+.venv/
+wsl_venv/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database & Large Data
+chroma_db/
+doc.tar.gz
+HTML/
+
+# Editor & System Files
+*~
+*.swp
+*.un~
+.DS_Store
+Thumbs.db
+
