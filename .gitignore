@@ -8,7 +8,7 @@ doc.tar.gz
 wsl_venv
 chroma_db
 *.swp
-
+.env
 .venv/
 wsl_venv/
 
