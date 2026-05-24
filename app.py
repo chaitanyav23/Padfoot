@@ -402,9 +402,11 @@ async def ask(request: QueryRequest):
             final_sources.append(s)
             seen_src_names.add(s)
     
+    images_used = []
     for m in selected_image_metas:
         img_src = m.get("image_src")
         if img_src and img_src not in seen_src_names:
             final_sources.append(f"Image: {img_src}")
+            images_used.append(img_src)
 
-    return QueryResponse(answer=answer, sources=final_sources)
+    return QueryResponse(answer=answer, sources=final_sources, images_used=images_used)
